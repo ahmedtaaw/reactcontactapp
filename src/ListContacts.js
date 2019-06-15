@@ -7,8 +7,17 @@ class ListContacts extends Component{
             <ol className="contact-list">
                 {
                     this.props.contacts.map((contact)=>(
-                        <li key={contact.name}>
-                            {contact.name}
+                        <li key={contact.name} className='contact-list-item'>
+                            <div
+                            className='contact-avatar'
+                            style={{
+                                backgroundImage:`url(${contact.avatarURL})`
+                            }}
+                            ></div>
+                            <div className="contact-details">
+                                <p>{contact.name}</p>
+                                <p>{contact.handle}</p>
+                            </div>
                         </li>
                     ))
                 }
