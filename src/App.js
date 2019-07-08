@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <div>
         <ListContacts 
-        contacts={{}}
+        contacts={this.state.contacts}
         onDeleteContact={this.removeContact}
         />
       </div>
