@@ -22,6 +22,15 @@ class ListContacts extends Component {
         const {query} = this.state
         const {contacts, onDeleteContact} = this.props
 
+        //if query still an empty string
+        const showingContacts = query === ''
+        //then we want to show our contacts to be original contacts
+        ? contacts
+        //if not
+        : contacts.filter((c)=>
+            c.name.toLowerCase().includes(query.toLowerCase())
+        )
+
         return (
             <div className="list-contacts">
                 {
@@ -38,7 +47,7 @@ class ListContacts extends Component {
                     </div>
                     <ol className="contact-list">
                         {
-                            contacts.map((contact) => (
+                            showingContacts.map((contact) => (
                                 <li key={contact.name} className='contact-list-item'>
                                     <div
                                         className='contact-avatar'
