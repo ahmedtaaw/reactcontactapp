@@ -12,9 +12,13 @@ class App extends Component {
 
   componentDidMount(){
     //call contact api
-    //then return a promise
+    //then return a promise when it resolve
+    //it passes contacts
+    
     ContactsAPI.getAll()
+    //since once we have contacts in order to update our state
     .then((contacts)=>{
+      //will return an object with brand new contacts
       this.setState(()=>({
         contacts
       }))
@@ -30,6 +34,8 @@ class App extends Component {
         return c.id !==contact.id
       })
     }))
+
+    ContactsAPI.remove(contact);
   }
 
   render() {
