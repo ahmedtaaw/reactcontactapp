@@ -1,7 +1,12 @@
 import React, { Component} from 'react';
 import propTypes from 'prop-types'
 
-class ListContacts extends Component{
+class ListContacts extends Component{ 
+    static propTypes = {
+        contacts: propTypes.array.isRequired,
+        onDeleteContact: propTypes.func.isRequired,
+    }
+    
     render(){
         return(
 <div className="list-contacts">
@@ -43,10 +48,5 @@ class ListContacts extends Component{
 }
 
 
-
-ListContacts.propTypes = {
-    contacts: propTypes.array.isRequired,
-    onDeleteContact: propTypes.func.isRequired
-}
 
 export default ListContacts;
