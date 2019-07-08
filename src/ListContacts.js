@@ -5,6 +5,15 @@ import propTypes from 'prop-types'
 function ListContacts (props){
    
         return(
+            <div className="list-contacts">
+           <div className='list-contacts-top'>
+          <input
+            className='search-contacts'
+            type='text'
+            placeholder='Search Contacts'
+           
+          />
+        </div>
             <ol className="contact-list">
                 {
                     props.contacts.map((contact)=>(
@@ -28,6 +37,8 @@ function ListContacts (props){
                     ))
                 }
             </ol>
+       
+            </div>
         )
     
 }
