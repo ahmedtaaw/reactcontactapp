@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component} from 'react';
 import propTypes from 'prop-types'
 
-
-function ListContacts (props){
-   
+class ListContacts extends Component{
+    render(){
         return(
-            <div className="list-contacts">
+<div className="list-contacts">
            <div className='list-contacts-top'>
           <input
             className='search-contacts'
@@ -40,8 +39,10 @@ function ListContacts (props){
        
             </div>
         )
-    
+    }
 }
+
+
 
 ListContacts.propTypes = {
     contacts: propTypes.array.isRequired,
