@@ -25,7 +25,7 @@ class ListContacts extends Component {
 
     render() {
         const {query} = this.state
-        const {contacts, onDeleteContact} = this.props
+        const {contacts, onDeleteContact, onNavigate } = this.props
 
         //if query still an empty string
         const showingContacts = query === ''
@@ -51,7 +51,7 @@ class ListContacts extends Component {
                         />
                         <a 
                         href="#create"
-                        onClick={()=>({})}
+                        onClick={onNavigate}
                         className='add-contact'
                         >Add Contact</a>
                     </div>
