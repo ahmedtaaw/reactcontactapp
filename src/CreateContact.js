@@ -10,7 +10,11 @@ class CreateContact extends Component{
             hash:true
         })
         console.log('values', values)
+        if (this.props.onCreateContact){
+            this.props.onCreateContact(values)
+        }
     }
+ 
     render(){
         return(
             <div>
