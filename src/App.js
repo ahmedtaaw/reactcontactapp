@@ -61,7 +61,7 @@ class App extends Component {
 
         
         
-        <Route path='/create' Component={CreateContact} />
+        <Route path='/create' component={CreateContact} />
       </div>
     ); 
   }

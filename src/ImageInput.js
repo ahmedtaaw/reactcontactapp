@@ -114,4 +114,4 @@ class ImageInput extends React.Component {
   }
 }
 
-export default ImageInput
+export default ImageInput;
